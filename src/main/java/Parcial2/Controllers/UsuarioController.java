@@ -2,6 +2,7 @@ package Parcial2.Controllers;
 
 import Parcial2.Entities.Usuario;
 import Parcial2.Services.UsuarioService;
+import Parcial2.Util.SessionData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -31,7 +32,15 @@ public class UsuarioController {
     @RequestMapping(value = "/usuarios/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ResponseEntity<Usuario> getById(@PathVariable("id") int id){
         if(uService.getById(id) != null) {
-            return new ResponseEntity<Usuario>(uService.getById(id), HttpStatus.OK);
+            return new ResponseEntity<Usuario>(uService.getById(id), HttpStatus.CREATED);
+        }else{
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        }
+    }
+    @RequestMapping(value = "/usuarios/{nombre}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody ResponseEntity<Usuario> getById(@PathVariable("nombre") String nombre){
+        if(uService.getByNombre(nombre) != null) {
+            return new ResponseEntity<Usuario>(uService.getByNombre(nombre), HttpStatus.CREATED);
         }else{
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
@@ -46,7 +55,7 @@ public class UsuarioController {
         }
     }
 
-    @RequestMapping(value = "/borrarUsuario", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/usuarios", method = RequestMethod.DELETE)
     public ResponseEntity delete(@RequestHeader int id){
         if(uService.delete(id)){
             return new ResponseEntity(HttpStatus.OK);

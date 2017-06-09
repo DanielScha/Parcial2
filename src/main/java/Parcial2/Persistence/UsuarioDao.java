@@ -11,7 +11,7 @@ import java.util.List;
  * Created by yo on 6/6/2017.
  */
 @Repository
-public class UsuarioDao extends Dao {
+public class UsuarioDao extends AbstractDao<Usuario> {
 
     public UsuarioDao(){
         super();
@@ -57,7 +57,6 @@ public class UsuarioDao extends Dao {
     }
     public Usuario getById(int id){
         try{
-            System.out.println(id);
             PreparedStatement ps = cn.prepareStatement("SELECT * FROM usuarios WHERE id = ?");
             ps.setInt(1,id);
             ResultSet rs = ps.executeQuery();
@@ -73,6 +72,24 @@ public class UsuarioDao extends Dao {
             return null;
         }
     }
+    public Usuario getByNombre(String nombre){
+        try{
+            PreparedStatement ps = cn.prepareStatement("SELECT * FROM usuarios WHERE nombre_usuario = ?");
+            ps.setString(1,nombre);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                Usuario u = new Usuario(rs.getString("nombre_usuario"), rs.getString("nombre"), rs.getString("apellido"), rs.getString("direccion"), rs.getString("telefono"), rs.getString("ciudad"), rs.getString("provincia"),
+                        rs.getString("pais"), rs.getString("contraseña"), rs.getString("email"), null);
+                u.setId(rs.getInt("id"));
+                return u;
+            }
+            return null;
+        }catch(SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public boolean delete(int id){
         try{
             PreparedStatement ps = cn.prepareStatement("DELETE FROM usuarios WHERE id = ?;");
@@ -82,6 +99,24 @@ public class UsuarioDao extends Dao {
         }catch (SQLException e){
             e.printStackTrace();
             return false;
+        }
+    }
+    public Usuario login(String nombreUsuario, String contra){
+        try{
+            PreparedStatement ps = cn.prepareStatement("SELECT * FROM usuarios WHERE nombre_usuario = ? AND contraseña = ?");
+            ps.setString(1,nombreUsuario);
+            ps.setString(2,contra);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                Usuario u = new Usuario(rs.getString("nombre_usuario"), rs.getString("nombre"), rs.getString("apellido"), rs.getString("direccion"), rs.getString("telefono"), rs.getString("ciudad"), rs.getString("provincia"),
+                        rs.getString("pais"), rs.getString("contraseña"), rs.getString("email"), null);
+                u.setId(rs.getInt("id"));
+                return u;
+            }
+            return null;
+        }catch(SQLException e) {
+            e.printStackTrace();
+            return null;
         }
     }
 }

@@ -30,4 +30,6 @@ public class UsuarioService {
     public boolean delete(int id){
         return uDao.delete(id);
     }
+    public Usuario getByNombre(String nombre){ return uDao.getByNombre(nombre);}
+    public Usuario login(String nombreUsuario, String contra){ return uDao.login(nombreUsuario, contra);}
 }
