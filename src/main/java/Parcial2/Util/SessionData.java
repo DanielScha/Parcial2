@@ -21,14 +21,14 @@ import java.util.UUID;
 @Service
 public class SessionData {
     final static Logger logger = Logger.getLogger(SessionData.class);
-    HashMap<String, AuthenticationData> sessionData;
+    private HashMap<String, AuthenticationData> sessionData;
 
     @Value("${session.expiration}")
     int expirationTime;
 
 
     public SessionData() {
-        this.sessionData = new HashMap<String, AuthenticationData>();
+        sessionData = new HashMap<String, AuthenticationData>();
     }
 
     public String addSession(Usuario usuario) {
@@ -36,7 +36,7 @@ public class SessionData {
         AuthenticationData aData = new AuthenticationData();
         aData.setUsuario(usuario);
         aData.setLastAction(new DateTime());
-        this.sessionData.put(sessionId, aData);
+        sessionData.put(sessionId, aData);
         return sessionId;
     }
 
@@ -46,7 +46,7 @@ public class SessionData {
     }
 
     public AuthenticationData getSession(String sessionId) {
-        AuthenticationData aData = this.sessionData.get(sessionId);
+        AuthenticationData aData = sessionData.get(sessionId);
         if (aData != null) {
             return aData;
         } else {
@@ -57,12 +57,12 @@ public class SessionData {
     @Scheduled(fixedRate = 5000)
     public void checkSessions() {
         System.out.println("Checking sessions");
-        Set<String> sessionsId = this.sessionData.keySet();
+        Set<String> sessionsId = sessionData.keySet();
         for (String sessionId : sessionsId) {
-            AuthenticationData aData = this.sessionData.get(sessionId);
+            AuthenticationData aData = sessionData.get(sessionId);
             if (aData.getLastAction().plusSeconds(expirationTime).isBefore(System.currentTimeMillis())) {
                 System.out.println("Deleting sessionId = " + sessionId);
-                this.sessionData.remove(sessionId);
+                sessionData.remove(sessionId);
             }
         }
     }

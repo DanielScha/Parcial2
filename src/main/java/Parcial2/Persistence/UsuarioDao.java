@@ -2,6 +2,7 @@ package Parcial2.Persistence;
 
 import Parcial2.Entities.Usuario;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.List;
 /**
  * Created by yo on 6/6/2017.
  */
-@Repository
+@Service
 public class UsuarioDao extends AbstractDao<Usuario> {
 
     public UsuarioDao(){

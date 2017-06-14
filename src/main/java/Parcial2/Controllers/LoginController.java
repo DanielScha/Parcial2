@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * Created by yo on 8/6/2017.
  */
-@Controller
+@RestController
 public class LoginController {
 
     @Autowired

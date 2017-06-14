@@ -16,6 +16,10 @@ import java.util.*;
  * Created by yo on 7/6/2017.
  */
 @Controller
+@RequestMapping(
+        value = "/api",
+        produces = MediaType.APPLICATION_JSON_VALUE
+)
 public class UsuarioController {
     @Autowired
     UsuarioService uService;
@@ -29,18 +33,18 @@ public class UsuarioController {
         }
     }
 
-    @RequestMapping(value = "/usuarios/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody ResponseEntity<Usuario> getById(@PathVariable("id") int id){
+    /*@RequestMapping(value = "/usuarios/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody ResponseEntity<Usuario> getById(@RequestParam("id") int id){
         if(uService.getById(id) != null) {
-            return new ResponseEntity<Usuario>(uService.getById(id), HttpStatus.CREATED);
+            return new ResponseEntity<Usuario>(uService.getById(id), HttpStatus.OK);
         }else{
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
-    }
-    @RequestMapping(value = "/usuarios/{nombre}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody ResponseEntity<Usuario> getById(@PathVariable("nombre") String nombre){
-        if(uService.getByNombre(nombre) != null) {
-            return new ResponseEntity<Usuario>(uService.getByNombre(nombre), HttpStatus.CREATED);
+    }*/
+    @RequestMapping(value = "/usuarios/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody ResponseEntity<Usuario> getByNombre(@RequestParam("nombreUsuario") String nombreUsuario){
+        if(uService.getByNombre(nombreUsuario) != null) {
+            return new ResponseEntity<Usuario>(uService.getByNombre(nombreUsuario), HttpStatus.OK);
         }else{
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }

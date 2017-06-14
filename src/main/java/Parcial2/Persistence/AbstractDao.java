@@ -28,7 +28,7 @@ public abstract class AbstractDao<T> {
     }
     public abstract boolean save(T t);
     public abstract List<T> getAll();
-    public abstract T getById(int id);
     public abstract boolean delete(int id);
+    public abstract T getById(int id);
 
 }
