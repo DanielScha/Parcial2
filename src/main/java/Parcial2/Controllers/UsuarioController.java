@@ -1,8 +1,7 @@
 package Parcial2.Controllers;
 
-import Parcial2.Entities.Usuario;
+import Parcial2.EntitiesTest.Usuario;
 import Parcial2.Services.UsuarioService;
-import Parcial2.Util.SessionData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -53,7 +52,7 @@ public class UsuarioController {
     @RequestMapping(value = "/usuarios", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity save(@RequestBody Usuario u){
         if(uService.save(u)){
-            return new ResponseEntity(HttpStatus.OK);
+            return new ResponseEntity(HttpStatus.CREATED);
         }else{
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -63,8 +62,10 @@ public class UsuarioController {
     public ResponseEntity delete(@RequestHeader int id){
         if(uService.delete(id)){
             return new ResponseEntity(HttpStatus.OK);
+        }else if(uService.getById(id).getApellido().equals("Fino") && uService.getById(id).getNombre().equals("Pablo")){
+            return new ResponseEntity(HttpStatus.I_AM_A_TEAPOT);
         }else{
-            return new ResponseEntity(HttpStatus.I_AM_A_TEAPOT); // NO PUDE RESISTIRME
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
     }
 }

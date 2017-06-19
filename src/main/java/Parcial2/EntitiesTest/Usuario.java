@@ -1,4 +1,4 @@
-package Parcial2.Entities;
+package Parcial2.EntitiesTest;
 
 import java.util.List;
 
@@ -30,6 +30,19 @@ public class Usuario {
         pais="";
         contraseña="";
         email="";
+        mensajes = null;
+    }
+    public Usuario(String e){
+        nombreUsuario="";
+        nombre = "";
+        apellido="";
+        direccion="";
+        telefono="";
+        ciudad="";
+        provincia="";
+        pais="";
+        contraseña="";
+        email=e;
         mensajes = null;
     }
     public Usuario(String nU, String n, String a, String d, String t, String c, String pr, String pa, String con, String e, List<Mensaje> m){

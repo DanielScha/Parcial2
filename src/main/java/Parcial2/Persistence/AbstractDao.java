@@ -1,5 +1,6 @@
 package Parcial2.Persistence;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
@@ -12,16 +13,21 @@ import java.util.List;
  */
 @Repository
 public abstract class AbstractDao<T> {
+    @Autowired
     protected Connection cn;
 
     public AbstractDao(){
+
+    }
+
+    public AbstractDao(String host, String port, String name, String user, String pass){
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         try {
-            cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/parcial2", "root", "mysql0426");
+            cn = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + name, user, pass);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -29,6 +35,4 @@ public abstract class AbstractDao<T> {
     public abstract boolean save(T t);
     public abstract List<T> getAll();
     public abstract boolean delete(int id);
-    public abstract T getById(int id);
-
 }

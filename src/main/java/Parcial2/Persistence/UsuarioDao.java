@@ -1,8 +1,9 @@
 package Parcial2.Persistence;
 
-import Parcial2.Entities.Usuario;
+import Parcial2.EntitiesTest.Usuario;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,11 +12,16 @@ import java.util.List;
 /**
  * Created by yo on 6/6/2017.
  */
-@Service
+@Repository
 public class UsuarioDao extends AbstractDao<Usuario> {
 
     public UsuarioDao(){
         super();
+    }
+    @Autowired
+    public UsuarioDao(@Value("${db.host}") String host, @Value("${db.port}") String port, @Value("${db.name}") String name,
+                      @Value("${db.username}") String user, @Value("${db.password}") String pass){
+        super(host,port,name,user,pass);
     }
 
     public boolean save(Usuario user){

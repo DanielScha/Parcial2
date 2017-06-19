@@ -1,4 +1,4 @@
-package Parcial2.Entities;
+package Parcial2.EntitiesTest;
 
 import java.sql.Timestamp;
 
@@ -6,6 +6,7 @@ import java.sql.Timestamp;
  * Created by yo on 6/6/2017.
  */
 public class Mensaje {
+    private int id;
     private Usuario remitente;
     private Usuario recipiente;
     private String asunto;
@@ -13,6 +14,7 @@ public class Mensaje {
     private Timestamp fecha;
 
     public Mensaje(){
+        id=0;
         remitente=null;
         recipiente=null;
         asunto="";
@@ -20,11 +22,20 @@ public class Mensaje {
         fecha=null;
     }
     public Mensaje(Usuario remi, Usuario reci, String a, String m, Timestamp f){
+        id=0;
         remitente = remi;
         recipiente = reci;
         asunto = a;
         mensaje = m;
         fecha = f;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Usuario getRemitente() {

@@ -1,8 +1,10 @@
 Parcial2\Entities\Usuario.class
 Parcial2\Entities\Mensaje.class
 Parcial2\Filter$HeaderMapRequestWrapper.class
+Parcial2\Persistence\MensajeDao.class
 Parcial2\Persistence\UsuarioDao.class
 Parcial2\Persistence\AbstractDao.class
+Parcial2\Controllers\MensajesController.class
 Parcial2\Util\SessionData.class
 Parcial2\Config.class
 Parcial2\Util\AuthenticationData.class
@@ -10,4 +12,5 @@ Parcial2\App.class
 Parcial2\Filter.class
 Parcial2\Services\UsuarioService.class
 Parcial2\Controllers\UsuarioController.class
+Parcial2\Services\MensajeService.class
 Parcial2\Controllers\LoginController.class

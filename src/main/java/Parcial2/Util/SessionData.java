@@ -1,15 +1,11 @@
 package Parcial2.Util;
 
-import Parcial2.Entities.Usuario;
+import Parcial2.EntitiesTest.Usuario;
 import org.springframework.stereotype.Service;
-import groovy.util.logging.Slf4j;
 import org.apache.log4j.Logger;
-import org.apache.log4j.Priority;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Set;

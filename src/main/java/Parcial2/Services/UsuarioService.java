@@ -1,6 +1,6 @@
 package Parcial2.Services;
 
-import Parcial2.Entities.Usuario;
+import Parcial2.EntitiesTest.Usuario;
 import Parcial2.Persistence.UsuarioDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
