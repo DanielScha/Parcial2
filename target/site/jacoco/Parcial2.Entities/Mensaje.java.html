@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Mensaje.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Parcial2</a> &gt; <a href="index.source.html" class="el_package">Parcial2.Entities</a> &gt; <span class="el_source">Mensaje.java</span></div><h1>Mensaje.java</h1><pre class="source lang-java linenums">package Parcial2.Entities;
+
+import java.sql.Timestamp;
+
+/**
+ * Created by yo on 6/6/2017.
+ */
+public class Mensaje {
+    private int id;
+    private Usuario remitente;
+    private Usuario recipiente;
+    private String asunto;
+    private String mensaje;
+    private Timestamp fecha;
+
+<span class="fc" id="L16">    public Mensaje(){</span>
+<span class="fc" id="L17">        id=0;</span>
+<span class="fc" id="L18">        remitente=null;</span>
+<span class="fc" id="L19">        recipiente=null;</span>
+<span class="fc" id="L20">        asunto=&quot;&quot;;</span>
+<span class="fc" id="L21">        mensaje=&quot;&quot;;</span>
+
+<span class="fc" id="L23">        fecha=null;</span>
+<span class="fc" id="L24">    }</span>
+<span class="fc" id="L25">    public Mensaje(Usuario remi, Usuario reci, String a, String m, Timestamp f){</span>
+<span class="fc" id="L26">        id=0;</span>
+<span class="fc" id="L27">        remitente = remi;</span>
+<span class="fc" id="L28">        recipiente = reci;</span>
+<span class="fc" id="L29">        asunto = a;</span>
+<span class="fc" id="L30">        mensaje = m;</span>
+<span class="fc" id="L31">        fecha = f;</span>
+<span class="fc" id="L32">    }</span>
+
+    public int getId() {
+<span class="fc" id="L35">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="fc" id="L39">        this.id = id;</span>
+<span class="fc" id="L40">    }</span>
+
+    public Usuario getRemitente() {
+<span class="fc" id="L43">        return remitente;</span>
+    }
+
+    public void setRemitente(Usuario remitente) {
+<span class="fc" id="L47">        this.remitente = remitente;</span>
+<span class="fc" id="L48">    }</span>
+
+    public Usuario getRecipiente() {
+<span class="fc" id="L51">        return recipiente;</span>
+    }
+
+    public void setRecipiente(Usuario recipiente) {
+<span class="fc" id="L55">        this.recipiente = recipiente;</span>
+<span class="fc" id="L56">    }</span>
+
+    public String getAsunto() {
+<span class="fc" id="L59">        return asunto;</span>
+    }
+
+    public void setAsunto(String asunto) {
+<span class="fc" id="L63">        this.asunto = asunto;</span>
+<span class="fc" id="L64">    }</span>
+
+    public String getMensaje() {
+<span class="fc" id="L67">        return mensaje;</span>
+    }
+
+    public void setMensaje(String mensaje) {
+<span class="fc" id="L71">        this.mensaje = mensaje;</span>
+<span class="fc" id="L72">    }</span>
+
+    public Timestamp getFecha() {
+<span class="fc" id="L75">        return fecha;</span>
+    }
+
+    public void setFecha(Timestamp fecha) {
+<span class="fc" id="L79">        this.fecha = fecha;</span>
+<span class="fc" id="L80">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

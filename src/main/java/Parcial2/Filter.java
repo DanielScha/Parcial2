@@ -32,14 +32,11 @@ public class Filter extends OncePerRequestFilter {
         String sessionId = request.getHeader("sessionid");
         AuthenticationData data = sessionData.getSession(sessionId);
         if (null != data) {
-            HeaderMapRequestWrapper requestWrapper = new HeaderMapRequestWrapper(request);
-            requestWrapper.addHeader("usuario", data.getUsuario().getNombreUsuario());
-            filterChain.doFilter(requestWrapper, response);
+            HeaderMapRequestWrapper requestWrapper = new HeaderMapRequestWrapper(request);requestWrapper.addHeader("usuario", data.getUsuario().getNombreUsuario());filterChain.doFilter(requestWrapper, response);
         } else {
             response.setStatus(HttpStatus.UNAUTHORIZED.value());
         }
     }
-
     public class HeaderMapRequestWrapper extends HttpServletRequestWrapper {
         /**
          * construct a wrapper for this request
@@ -58,10 +55,10 @@ public class Filter extends OncePerRequestFilter {
          * @param name
          * @param value
          */
-        public void addHeader(String name, String value) {
-            headerMap.put(name, value);
+          public void addHeader(String name, String value) {
+           headerMap.put(name, value);
         }
-
+/*
         @Override
         public String getHeader(String name) {
             String headerValue = super.getHeader(name);
@@ -73,7 +70,7 @@ public class Filter extends OncePerRequestFilter {
 
         /**
          * get the Header names
-         */
+         *//*
         @Override
         public Enumeration<String> getHeaderNames() {
             List<String> names = Collections.list(super.getHeaderNames());
@@ -91,7 +88,7 @@ public class Filter extends OncePerRequestFilter {
             }
             return Collections.enumeration(values);
         }
-
+*/
     }
 
 }

@@ -1,538 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="7" ignored="0" total="26" passed="19">
+<testng-results skipped="0" failed="0" ignored="0" total="35" passed="35">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="1227" started-at="2017-06-20T18:16:44Z" finished-at="2017-06-20T18:16:45Z">
+  <suite name="Surefire suite" duration-ms="9189" started-at="2017-06-21T19:51:01Z" finished-at="2017-06-21T19:51:10Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="1227" started-at="2017-06-20T18:16:44Z" finished-at="2017-06-20T18:16:45Z">
-      <class name="Parcial2.Entities.UsuarioTest">
-        <test-method status="PASS" signature="testNombreUsuario()" name="testNombreUsuario" duration-ms="5" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
+    <test name="Surefire test" duration-ms="9189" started-at="2017-06-21T19:51:01Z" finished-at="2017-06-21T19:51:10Z">
+      <class name="Parcial2.FilterTest">
+        <test-method status="PASS" signature="testDoFilterInternalOk() throws java.lang.Exception" name="testDoFilterInternalOk" duration-ms="250" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNombreUsuario -->
-        <test-method status="PASS" signature="testEmail()" name="testEmail" duration-ms="6" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
+        </test-method> <!-- testDoFilterInternalOk -->
+      </class> <!-- Parcial2.FilterTest -->
+      <class name="Parcial2.Entities.UsuarioTest">
+        <test-method status="PASS" signature="testEmail()" name="testEmail" duration-ms="15" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEmail -->
-        <test-method status="PASS" signature="testPais()" name="testPais" duration-ms="5" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPais -->
-        <test-method status="PASS" signature="testId()" name="testId" duration-ms="5" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testId -->
-        <test-method status="PASS" signature="testTelefono()" name="testTelefono" duration-ms="5" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
+        <test-method status="PASS" signature="testTelefono()" name="testTelefono" duration-ms="15" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTelefono -->
-        <test-method status="PASS" signature="testContraseña()" name="testContraseña" duration-ms="6" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
+        <test-method status="PASS" signature="testContraseña()" name="testContraseña" duration-ms="31" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContraseña -->
-        <test-method status="PASS" signature="testDireccion()" name="testDireccion" duration-ms="5" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
+        <test-method status="PASS" signature="testPais()" name="testPais" duration-ms="15" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPais -->
+        <test-method status="PASS" signature="testDireccion()" name="testDireccion" duration-ms="15" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDireccion -->
-        <test-method status="PASS" signature="testMensajes()" name="testMensajes" duration-ms="6" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
+        <test-method status="PASS" signature="testNombreUsuario()" name="testNombreUsuario" duration-ms="15" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNombreUsuario -->
+        <test-method status="PASS" signature="testId()" name="testId" duration-ms="15" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testId -->
+        <test-method status="PASS" signature="testMensajes()" name="testMensajes" duration-ms="16" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMensajes -->
-        <test-method status="PASS" signature="testNombre()" name="testNombre" duration-ms="7" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
+        <test-method status="PASS" signature="testNombre()" name="testNombre" duration-ms="16" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNombre -->
-        <test-method status="PASS" signature="testProvincia()" name="testProvincia" duration-ms="6" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testProvincia -->
-        <test-method status="PASS" signature="testApellido()" name="testApellido" duration-ms="7" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
+        <test-method status="PASS" signature="testApellido()" name="testApellido" duration-ms="16" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApellido -->
-        <test-method status="PASS" signature="testCiudad()" name="testCiudad" duration-ms="6" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
+        <test-method status="PASS" signature="testCiudad()" name="testCiudad" duration-ms="16" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCiudad -->
+        <test-method status="PASS" signature="testProvincia()" name="testProvincia" duration-ms="16" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProvincia -->
       </class> <!-- Parcial2.Entities.UsuarioTest -->
       <class name="Parcial2.AppTest">
-        <test-method status="PASS" signature="testApp()" name="testApp" duration-ms="42" started-at="2017-06-20T15:16:44Z" finished-at="2017-06-20T15:16:44Z">
+        <test-method status="PASS" signature="testApp()" name="testApp" duration-ms="16" started-at="2017-06-21T16:51:01Z" finished-at="2017-06-21T16:51:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApp -->
       </class> <!-- Parcial2.AppTest -->
       <class name="Parcial2.Controllers.MensajesControllerTest">
-        <test-method status="FAIL" signature="testSaveCreated() throws java.lang.Exception" name="testSaveCreated" duration-ms="68" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[Failed to load ApplicationContext]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL 'contextLoader'. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+        <test-method status="PASS" signature="testDeleteBadRequest() throws java.lang.Exception" name="testDeleteBadRequest" duration-ms="329" started-at="2017-06-21T16:51:09Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteBadRequest -->
+        <test-method status="PASS" signature="testSaveCreated() throws java.lang.Exception" name="testSaveCreated" duration-ms="313" started-at="2017-06-21T16:51:09Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSaveCreated -->
-      </class> <!-- Parcial2.Controllers.MensajesControllerTest -->
-      <class name="Parcial2.Entities.MensajeTest">
-        <test-method status="PASS" signature="testId()" name="testId" duration-ms="4" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testId -->
-        <test-method status="PASS" signature="testMensaje()" name="testMensaje" duration-ms="5" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMensaje -->
-        <test-method status="PASS" signature="testRecipiente()" name="testRecipiente" duration-ms="3" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRecipiente -->
-        <test-method status="PASS" signature="testFecha()" name="testFecha" duration-ms="2" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFecha -->
-        <test-method status="PASS" signature="testAsunto()" name="testAsunto" duration-ms="4" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAsunto -->
-        <test-method status="PASS" signature="testRemitente()" name="testRemitente" duration-ms="5" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRemitente -->
-      </class> <!-- Parcial2.Entities.MensajeTest -->
-      <class name="Parcial2.Controllers.UsuarioControllerTest">
-        <test-method status="FAIL" signature="testGetAllOk() throws java.lang.Exception" name="testGetAllOk" duration-ms="60" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[Failed to load ApplicationContext]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL 'contextLoader'. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+        <test-method status="PASS" signature="testGetAllOk() throws java.lang.Exception" name="testGetAllOk" duration-ms="157" started-at="2017-06-21T16:51:09Z" finished-at="2017-06-21T16:51:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetAllOk -->
-        <test-method status="FAIL" signature="testSaveInternalServerError() throws java.lang.Exception" name="testSaveInternalServerError" duration-ms="70" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[Failed to load ApplicationContext]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL 'contextLoader'. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+        <test-method status="PASS" signature="testGetAllDeletedOk() throws java.lang.Exception" name="testGetAllDeletedOk" duration-ms="125" started-at="2017-06-21T16:51:09Z" finished-at="2017-06-21T16:51:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSaveInternalServerError -->
-        <test-method status="FAIL" signature="testDeleteOk() throws java.lang.Exception" name="testDeleteOk" duration-ms="104" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[Failed to load ApplicationContext]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL 'contextLoader'. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+        </test-method> <!-- testGetAllDeletedOk -->
+        <test-method status="PASS" signature="testGetAllSendedOk() throws java.lang.Exception" name="testGetAllSendedOk" duration-ms="188" started-at="2017-06-21T16:51:09Z" finished-at="2017-06-21T16:51:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllSendedOk -->
+        <test-method status="PASS" signature="testDeleteOk() throws java.lang.Exception" name="testDeleteOk" duration-ms="344" started-at="2017-06-21T16:51:09Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteOk -->
-        <test-method status="FAIL" signature="testGetByNombreOk() throws java.lang.Exception" name="testGetByNombreOk" duration-ms="101" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[Failed to load ApplicationContext]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL 'contextLoader'. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+      </class> <!-- Parcial2.Controllers.MensajesControllerTest -->
+      <class name="Parcial2.Entities.MensajeTest">
+        <test-method status="PASS" signature="testId()" name="testId" duration-ms="0" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetByNombreOk -->
-        <test-method status="FAIL" signature="testGetByNombreNotFound() throws java.lang.Exception" name="testGetByNombreNotFound" duration-ms="76" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[Failed to load ApplicationContext]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL 'contextLoader'. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+        </test-method> <!-- testId -->
+        <test-method status="PASS" signature="testMensaje()" name="testMensaje" duration-ms="0" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetByNombreNotFound -->
-        <test-method status="FAIL" signature="testSaveCreated() throws java.lang.Exception" name="testSaveCreated" duration-ms="90" started-at="2017-06-20T15:16:45Z" finished-at="2017-06-20T15:16:45Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[Failed to load ApplicationContext]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL 'contextLoader'. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+        </test-method> <!-- testMensaje -->
+        <test-method status="PASS" signature="testFecha()" name="testFecha" duration-ms="0" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFecha -->
+        <test-method status="PASS" signature="testRecipiente()" name="testRecipiente" duration-ms="0" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRecipiente -->
+        <test-method status="PASS" signature="testRemitente()" name="testRemitente" duration-ms="0" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemitente -->
+        <test-method status="PASS" signature="testAsunto()" name="testAsunto" duration-ms="0" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAsunto -->
+      </class> <!-- Parcial2.Entities.MensajeTest -->
+      <class name="Parcial2.Controllers.UsuarioControllerTest">
+        <test-method status="PASS" signature="testGetAllOk() throws java.lang.Exception" name="testGetAllOk" duration-ms="31" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllOk -->
+        <test-method status="PASS" signature="testSaveCreated() throws java.lang.Exception" name="testSaveCreated" duration-ms="78" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSaveCreated -->
+        <test-method status="PASS" signature="testDeleteBadRequest() throws java.lang.Exception" name="testDeleteBadRequest" duration-ms="109" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteBadRequest -->
+        <test-method status="PASS" signature="testGetByNombreNotFound() throws java.lang.Exception" name="testGetByNombreNotFound" duration-ms="47" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetByNombreNotFound -->
+        <test-method status="PASS" signature="testDeleteOk() throws java.lang.Exception" name="testDeleteOk" duration-ms="125" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteOk -->
+        <test-method status="PASS" signature="testGetByNombreOk() throws java.lang.Exception" name="testGetByNombreOk" duration-ms="94" started-at="2017-06-21T16:51:10Z" finished-at="2017-06-21T16:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetByNombreOk -->
       </class> <!-- Parcial2.Controllers.UsuarioControllerTest -->
+      <class name="Parcial2.Controllers.LoginControllerTest">
+        <test-method status="PASS" signature="testLoginForbbiden() throws java.lang.Exception" name="testLoginForbbiden" duration-ms="7735" started-at="2017-06-21T16:51:01Z" finished-at="2017-06-21T16:51:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginForbbiden -->
+        <test-method status="PASS" signature="testLoginOk() throws java.lang.Exception" name="testLoginOk" duration-ms="7720" started-at="2017-06-21T16:51:01Z" finished-at="2017-06-21T16:51:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginOk -->
+        <test-method status="PASS" signature="testLogoutOk() throws java.lang.Exception" name="testLogoutOk" duration-ms="7641" started-at="2017-06-21T16:51:01Z" finished-at="2017-06-21T16:51:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogoutOk -->
+      </class> <!-- Parcial2.Controllers.LoginControllerTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

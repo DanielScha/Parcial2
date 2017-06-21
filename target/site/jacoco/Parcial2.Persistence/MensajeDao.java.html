@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MensajeDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Parcial2</a> &gt; <a href="index.source.html" class="el_package">Parcial2.Persistence</a> &gt; <span class="el_source">MensajeDao.java</span></div><h1>MensajeDao.java</h1><pre class="source lang-java linenums">package Parcial2.Persistence;
+
+import Parcial2.Entities.Mensaje;
+import Parcial2.Entities.Usuario;
+import Parcial2.Util.AuthenticationData;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by yo on 18/6/2017.
+ */
+@Repository
+public class MensajeDao extends AbstractDao&lt;Mensaje&gt; {
+
+    @Autowired
+    public MensajeDao(@Value(&quot;${db.host}&quot;) String host, @Value(&quot;${db.port}&quot;) String port, @Value(&quot;${db.name}&quot;) String name,
+                      @Value(&quot;${db.username}&quot;) String user, @Value(&quot;${db.password}&quot;) String pass){
+<span class="fc" id="L25">        super(host,port,name,user,pass);</span>
+<span class="fc" id="L26">    }</span>
+
+    @Autowired
+    private AuthenticationData aD;
+
+    public boolean save(Mensaje message) {
+        try {
+<span class="fc" id="L33">            PreparedStatement ps = cn.prepareStatement(&quot;INSERT INTO mensajes (id_remitente, id_recipiente, asunto, mensaje, fecha, deleted) VALUES(?,?,?,?,?,?);&quot;);</span>
+<span class="fc" id="L34">            ps.setInt(1, message.getRemitente().getId());</span>
+<span class="fc" id="L35">            ps.setInt(2, message.getRecipiente().getId());</span>
+<span class="fc" id="L36">            ps.setString(3, message.getAsunto());</span>
+<span class="fc" id="L37">            ps.setString(4, message.getMensaje());</span>
+<span class="fc" id="L38">            ps.setTimestamp(5, message.getFecha());</span>
+<span class="fc" id="L39">            ps.setBoolean(6, false);</span>
+<span class="fc" id="L40">            ps.execute();</span>
+<span class="fc" id="L41">            return true;</span>
+<span class="nc" id="L42">        } catch (SQLException e) {</span>
+<span class="nc" id="L43">            e.printStackTrace();</span>
+<span class="nc" id="L44">            return false;</span>
+        }
+    }
+
+    public List&lt;Mensaje&gt; getAll(){
+        try{
+<span class="fc" id="L50">            PreparedStatement ps = cn.prepareStatement(&quot;SELECT m.id, m.asunto, m.mensaje, m.fecha, u.email FROM mensajes m INNER JOIN usuarios u &quot; +</span>
+                    &quot;ON m.id_remitente = u.id WHERE m.id_recipiente = ? AND m.deleted = false;&quot;);
+<span class="fc" id="L52">            ps.setInt(1, aD.getUsuario().getId());</span>
+<span class="fc" id="L53">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc" id="L54">            ArrayList&lt;Mensaje&gt; messages = new ArrayList&lt;Mensaje&gt;();</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">            while (rs.next()) {</span>
+<span class="fc" id="L56">                Usuario remitente = new Usuario(rs.getString(&quot;u.email&quot;));</span>
+<span class="fc" id="L57">                Mensaje m = new Mensaje(remitente, aD.getUsuario(), rs.getString(&quot;m.asunto&quot;), rs.getString(&quot;m.mensaje&quot;), rs.getTimestamp(&quot;m.fecha&quot;));</span>
+<span class="fc" id="L58">                m.setId(rs.getInt(&quot;m.id&quot;));</span>
+<span class="fc" id="L59">                messages.add(m);</span>
+<span class="fc" id="L60">            }</span>
+<span class="fc" id="L61">            return messages;</span>
+<span class="nc" id="L62">        }catch(SQLException e) {</span>
+<span class="nc" id="L63">            e.printStackTrace();</span>
+        }
+<span class="nc" id="L65">        return null;</span>
+    }
+    public List&lt;Mensaje&gt; getAllSended(){
+        try{
+<span class="fc" id="L69">            PreparedStatement ps = cn.prepareStatement(&quot;SELECT m.id, m.asunto, m.mensaje, m.fecha, u.email FROM mensajes m INNER JOIN usuarios u &quot; +</span>
+                    &quot;ON m.id_recipiente = u.id WHERE m.id_remitente = ?;&quot;);
+<span class="fc" id="L71">            ps.setInt(1, aD.getUsuario().getId());</span>
+<span class="fc" id="L72">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc" id="L73">            ArrayList&lt;Mensaje&gt; messages = new ArrayList&lt;Mensaje&gt;();</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">            while (rs.next()) {</span>
+<span class="fc" id="L75">                Usuario recipiente = new Usuario(rs.getString(&quot;u.email&quot;));</span>
+<span class="fc" id="L76">                Mensaje m = new Mensaje(aD.getUsuario(), recipiente, rs.getString(&quot;m.asunto&quot;), rs.getString(&quot;m.mensaje&quot;), rs.getTimestamp(&quot;m.fecha&quot;));</span>
+<span class="fc" id="L77">                m.setId(rs.getInt(&quot;m.id&quot;));</span>
+<span class="fc" id="L78">                messages.add(m);</span>
+<span class="fc" id="L79">            }</span>
+<span class="fc" id="L80">            return messages;</span>
+<span class="nc" id="L81">        }catch(SQLException e) {</span>
+<span class="nc" id="L82">            e.printStackTrace();</span>
+        }
+<span class="nc" id="L84">        return null;</span>
+    }
+    public List&lt;Mensaje&gt; getAllDeleted(){
+        try{
+<span class="fc" id="L88">            PreparedStatement ps = cn.prepareStatement(&quot;SELECT m.id, m.asunto, m.mensaje, m.fecha, u.email FROM mensajes m INNER JOIN usuarios u &quot; +</span>
+                                                               &quot;ON m.id_remitente = u.id WHERE m.id_recipiente = ? AND m.deleted = true;&quot;);
+<span class="fc" id="L90">            ps.setInt(1, aD.getUsuario().getId());</span>
+<span class="fc" id="L91">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc" id="L92">            ArrayList&lt;Mensaje&gt; messages = new ArrayList&lt;Mensaje&gt;();</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">            while (rs.next()) {</span>
+<span class="fc" id="L94">                Usuario remitente = new Usuario(rs.getString(&quot;u.email&quot;));</span>
+<span class="fc" id="L95">                Mensaje m = new Mensaje(remitente, aD.getUsuario(), rs.getString(&quot;m.asunto&quot;), rs.getString(&quot;m.mensaje&quot;), rs.getTimestamp(&quot;m.fecha&quot;));</span>
+<span class="fc" id="L96">                m.setId(rs.getInt(&quot;m.id&quot;));</span>
+<span class="fc" id="L97">                messages.add(m);</span>
+<span class="fc" id="L98">            }</span>
+<span class="fc" id="L99">            return messages;</span>
+<span class="nc" id="L100">        }catch(SQLException e) {</span>
+<span class="nc" id="L101">            e.printStackTrace();</span>
+        }
+<span class="nc" id="L103">        return null;</span>
+    }
+    public boolean delete(int id){
+        try{
+<span class="fc" id="L107">            PreparedStatement ps = cn.prepareStatement(&quot;UPDATE mensajes SET deleted = true WHERE id = ?;&quot;);</span>
+<span class="fc" id="L108">            ps.setInt(1, id);</span>
+<span class="fc" id="L109">            ps.execute();</span>
+<span class="fc" id="L110">            return true;</span>
+<span class="nc" id="L111">        }catch (SQLException e){</span>
+<span class="nc" id="L112">            e.printStackTrace();</span>
+<span class="nc" id="L113">            return false;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

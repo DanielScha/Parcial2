@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UsuarioService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Parcial2</a> &gt; <a href="index.source.html" class="el_package">Parcial2.Services</a> &gt; <span class="el_source">UsuarioService.java</span></div><h1>UsuarioService.java</h1><pre class="source lang-java linenums">package Parcial2.Services;
+
+import Parcial2.Entities.Usuario;
+import Parcial2.Persistence.UsuarioDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * Created by yo on 7/6/2017.
+ */
+@Service
+public class UsuarioService {
+    private UsuarioDao uDao;
+
+    @Autowired
+<span class="fc" id="L18">    public UsuarioService(UsuarioDao u){</span>
+<span class="fc" id="L19">        uDao = u;</span>
+<span class="fc" id="L20">    }</span>
+    public boolean save(Usuario u){
+<span class="fc" id="L22">       return uDao.save(u);</span>
+    }
+    public List&lt;Usuario&gt; getAll(){
+<span class="fc" id="L25">        return uDao.getAll();</span>
+    }
+    /*public Usuario getById(int id){
+        return uDao.getById(id);
+    }*/
+    public boolean delete(int id){
+<span class="fc" id="L31">        return uDao.delete(id);</span>
+    }
+<span class="fc" id="L33">    public Usuario getByNombre(String nombre){ return uDao.getByNombre(nombre);}</span>
+<span class="fc" id="L34">    public Usuario login(String nombreUsuario, String contra){ return uDao.login(nombreUsuario, contra);}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

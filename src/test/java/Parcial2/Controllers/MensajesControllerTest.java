@@ -57,17 +57,17 @@ public class MensajesControllerTest extends TestCase{
     public void setUp(){
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
         u = new Usuario();
-        u.setId(1);
-        u.setNombreUsuario("nombreUsuario");
-        u.setNombre("nombre");
-        u.setApellido("apellido");
-        u.setDireccion("direccion");
-        u.setTelefono("telefono");
-        u.setCiudad("ciudad");
-        u.setProvincia("provincia");
-        u.setPais("pais");
-        u.setContraseña("contraseña");
-        u.setEmail("email");
+        u.setId(6);
+        u.setNombreUsuario("danielScha");
+        u.setNombre("daniel");
+        u.setApellido("schaerer");
+        u.setDireccion("marconi1751");
+        u.setTelefono("36487236487263");
+        u.setCiudad("mar del plata");
+        u.setProvincia("buenosaires");
+        u.setPais("argento");
+        u.setContraseña("lacontra1234");
+        u.setEmail("daniel@daniel");
 
         u2 = new Usuario();
         u2.setId(2);

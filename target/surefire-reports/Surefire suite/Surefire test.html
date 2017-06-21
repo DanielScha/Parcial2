@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>19/7/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>35/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 20 15:16:44 ART 2017</td>
+<td>Started on:</td><td>Wed Jun 21 16:51:01 ART 2017</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1227 ms)</td>
+<tr><td>Total time:</td><td>9 seconds (9189 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,609 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Parcial2.Controllers.UsuarioControllerTest.testDeleteOk()'><b>testDeleteOk</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
-<td><div><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1836017760", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1836017760'><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-</pre></div></td>
-<td>0</td>
-<td>testDeleteOk(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
-<tr>
-<td title='Parcial2.Controllers.UsuarioControllerTest.testGetAllOk()'><b>testGetAllOk</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
-<td><div><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace245867715", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace245867715'><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-</pre></div></td>
-<td>0</td>
-<td>testGetAllOk(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
-<tr>
-<td title='Parcial2.Controllers.UsuarioControllerTest.testGetByNombreNotFound()'><b>testGetByNombreNotFound</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
-<td><div><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1794486854", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1794486854'><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-</pre></div></td>
-<td>0</td>
-<td>testGetByNombreNotFound(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
-<tr>
-<td title='Parcial2.Controllers.UsuarioControllerTest.testGetByNombreOk()'><b>testGetByNombreOk</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
-<td><div><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace37754966", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace37754966'><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-</pre></div></td>
-<td>0</td>
-<td>testGetByNombreOk(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
-<tr>
-<td title='Parcial2.Controllers.MensajesControllerTest.testSaveCreated()'><b>testSaveCreated</b><br>Test class: Parcial2.Controllers.MensajesControllerTest</td>
-<td><div><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1610853733", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1610853733'><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-</pre></div></td>
-<td>0</td>
-<td>testSaveCreated(Parcial2.Controllers.MensajesControllerTest)</td></tr>
-<tr>
-<td title='Parcial2.Controllers.UsuarioControllerTest.testSaveCreated()'><b>testSaveCreated</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
-<td><div><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace829567751", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace829567751'><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-</pre></div></td>
-<td>0</td>
-<td>testSaveCreated(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
-<tr>
-<td title='Parcial2.Controllers.UsuarioControllerTest.testSaveInternalServerError()'><b>testSaveInternalServerError</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
-<td><div><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2101493838", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2101493838'><pre>java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
-	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
-	at org.testng.TestRunner$1.run(TestRunner.java:667)
-	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:950)
-	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:698)
-	at org.testng.TestRunner.run(TestRunner.java:599)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:212)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext with a NULL &apos;contextLoader&apos;. Consider annotating your test class with @ContextConfiguration or @ContextHierarchy.
-	at org.springframework.util.Assert.notNull(Assert.java:115)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:57)
-	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
-	... 44 more
-</pre></div></td>
-<td>0</td>
-<td>testSaveInternalServerError(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -703,10 +100,35 @@ Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext
 <td>0</td>
 <td>testContraseña(Parcial2.Entities.UsuarioTest)</td></tr>
 <tr>
+<td title='Parcial2.Controllers.MensajesControllerTest.testDeleteBadRequest()'><b>testDeleteBadRequest</b><br>Test class: Parcial2.Controllers.MensajesControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testDeleteBadRequest(Parcial2.Controllers.MensajesControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.UsuarioControllerTest.testDeleteBadRequest()'><b>testDeleteBadRequest</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testDeleteBadRequest(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.MensajesControllerTest.testDeleteOk()'><b>testDeleteOk</b><br>Test class: Parcial2.Controllers.MensajesControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testDeleteOk(Parcial2.Controllers.MensajesControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.UsuarioControllerTest.testDeleteOk()'><b>testDeleteOk</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testDeleteOk(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
+<tr>
 <td title='Parcial2.Entities.UsuarioTest.testDireccion()'><b>testDireccion</b><br>Test class: Parcial2.Entities.UsuarioTest</td>
 <td></td>
 <td>0</td>
 <td>testDireccion(Parcial2.Entities.UsuarioTest)</td></tr>
+<tr>
+<td title='Parcial2.FilterTest.testDoFilterInternalOk()'><b>testDoFilterInternalOk</b><br>Test class: Parcial2.FilterTest</td>
+<td></td>
+<td>0</td>
+<td>testDoFilterInternalOk(Parcial2.FilterTest)</td></tr>
 <tr>
 <td title='Parcial2.Entities.UsuarioTest.testEmail()'><b>testEmail</b><br>Test class: Parcial2.Entities.UsuarioTest</td>
 <td></td>
@@ -718,6 +140,36 @@ Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext
 <td>0</td>
 <td>testFecha(Parcial2.Entities.MensajeTest)</td></tr>
 <tr>
+<td title='Parcial2.Controllers.MensajesControllerTest.testGetAllDeletedOk()'><b>testGetAllDeletedOk</b><br>Test class: Parcial2.Controllers.MensajesControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testGetAllDeletedOk(Parcial2.Controllers.MensajesControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.MensajesControllerTest.testGetAllOk()'><b>testGetAllOk</b><br>Test class: Parcial2.Controllers.MensajesControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testGetAllOk(Parcial2.Controllers.MensajesControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.UsuarioControllerTest.testGetAllOk()'><b>testGetAllOk</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testGetAllOk(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.MensajesControllerTest.testGetAllSendedOk()'><b>testGetAllSendedOk</b><br>Test class: Parcial2.Controllers.MensajesControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testGetAllSendedOk(Parcial2.Controllers.MensajesControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.UsuarioControllerTest.testGetByNombreNotFound()'><b>testGetByNombreNotFound</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testGetByNombreNotFound(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.UsuarioControllerTest.testGetByNombreOk()'><b>testGetByNombreOk</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testGetByNombreOk(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
+<tr>
 <td title='Parcial2.Entities.MensajeTest.testId()'><b>testId</b><br>Test class: Parcial2.Entities.MensajeTest</td>
 <td></td>
 <td>0</td>
@@ -727,6 +179,21 @@ Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext
 <td></td>
 <td>0</td>
 <td>testId(Parcial2.Entities.UsuarioTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.LoginControllerTest.testLoginForbbiden()'><b>testLoginForbbiden</b><br>Test class: Parcial2.Controllers.LoginControllerTest</td>
+<td></td>
+<td>7</td>
+<td>testLoginForbbiden(Parcial2.Controllers.LoginControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.LoginControllerTest.testLoginOk()'><b>testLoginOk</b><br>Test class: Parcial2.Controllers.LoginControllerTest</td>
+<td></td>
+<td>7</td>
+<td>testLoginOk(Parcial2.Controllers.LoginControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.LoginControllerTest.testLogoutOk()'><b>testLogoutOk</b><br>Test class: Parcial2.Controllers.LoginControllerTest</td>
+<td></td>
+<td>7</td>
+<td>testLogoutOk(Parcial2.Controllers.LoginControllerTest)</td></tr>
 <tr>
 <td title='Parcial2.Entities.MensajeTest.testMensaje()'><b>testMensaje</b><br>Test class: Parcial2.Entities.MensajeTest</td>
 <td></td>
@@ -767,6 +234,16 @@ Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext
 <td></td>
 <td>0</td>
 <td>testRemitente(Parcial2.Entities.MensajeTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.MensajesControllerTest.testSaveCreated()'><b>testSaveCreated</b><br>Test class: Parcial2.Controllers.MensajesControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testSaveCreated(Parcial2.Controllers.MensajesControllerTest)</td></tr>
+<tr>
+<td title='Parcial2.Controllers.UsuarioControllerTest.testSaveCreated()'><b>testSaveCreated</b><br>Test class: Parcial2.Controllers.UsuarioControllerTest</td>
+<td></td>
+<td>0</td>
+<td>testSaveCreated(Parcial2.Controllers.UsuarioControllerTest)</td></tr>
 <tr>
 <td title='Parcial2.Entities.UsuarioTest.testTelefono()'><b>testTelefono</b><br>Test class: Parcial2.Entities.UsuarioTest</td>
 <td></td>
