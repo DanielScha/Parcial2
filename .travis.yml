@@ -1,0 +1,9 @@
+language: java
+sudo: false
+script: mvn clean test
+notifications:
+  email:
+    recipients:
+      - danielschaerer96@hotmail.com
+    on_success: [always|never|change] # default: change
+    on_failure: [always|never|change] # default: always
