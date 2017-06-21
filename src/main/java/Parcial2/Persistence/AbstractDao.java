@@ -16,10 +16,6 @@ public abstract class AbstractDao<T> {
     @Autowired
     protected Connection cn;
 
-    public AbstractDao(){
-
-    }
-
     public AbstractDao(String host, String port, String name, String user, String pass){
         try {
             Class.forName("com.mysql.jdbc.Driver");

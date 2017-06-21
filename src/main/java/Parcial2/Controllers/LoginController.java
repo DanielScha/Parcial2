@@ -1,6 +1,6 @@
 package Parcial2.Controllers;
 
-import Parcial2.EntitiesTest.Usuario;
+import Parcial2.Entities.Usuario;
 import Parcial2.Services.UsuarioService;
 import Parcial2.Util.SessionData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +21,9 @@ public class LoginController {
     @Autowired
     SessionData sessionData;
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody ResponseEntity<String> login(@RequestParam("nombreUsuario") String nombreUsuario, @RequestParam("contra") String contra){
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public @ResponseBody ResponseEntity<String> login(@RequestParam("nombreUsuario") String nombreUsuario,
+                                                      @RequestParam("contra") String contra){
         if(uService.login(nombreUsuario,contra) != null){
             Usuario u = uService.login(nombreUsuario,contra);
             String idSession = sessionData.addSession(u);
@@ -33,8 +34,8 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/logout")
-    public @ResponseBody ResponseEntity logout(@RequestHeader("idSession") String idSession){
-        sessionData.removeSession(idSession);
+    public @ResponseBody ResponseEntity logout(@RequestHeader("sessionid") String sessionid){
+        sessionData.removeSession(sessionid);
         return new ResponseEntity(HttpStatus.ACCEPTED);
     }
 }

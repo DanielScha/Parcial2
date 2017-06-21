@@ -1,6 +1,6 @@
 package Parcial2.Controllers;
 
-import Parcial2.EntitiesTest.Mensaje;
+import Parcial2.Entities.Mensaje;
 import Parcial2.Services.MensajeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,6 +28,7 @@ public class MensajesController {
 
     @RequestMapping (value = "/mensajes", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity save(@RequestBody Mensaje m){
+        System.out.println(m);
         if(mService.save(m)){
             return new ResponseEntity(HttpStatus.CREATED);
         }else{
@@ -47,9 +48,9 @@ public class MensajesController {
 
     @RequestMapping (value = "/mensajes/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Mensaje>> getSended(){
-        List<Mensaje> m = mService.getAll();
+        List<Mensaje> m = mService.getAllSended();
         if(m!=null){
-            return new ResponseEntity<List<Mensaje>>(mService.getAll(), HttpStatus.OK);
+            return new ResponseEntity<List<Mensaje>>(mService.getAllSended(), HttpStatus.OK);
         }else {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
@@ -59,7 +60,7 @@ public class MensajesController {
     public ResponseEntity<List<Mensaje>> getDeleted(){
         List<Mensaje> m = mService.getAll();
         if(m!=null){
-            return new ResponseEntity<List<Mensaje>>(mService.getAll(), HttpStatus.OK);
+            return new ResponseEntity<List<Mensaje>>(mService.getAllDeleted(), HttpStatus.OK);
         }else {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
@@ -70,7 +71,7 @@ public class MensajesController {
         if(mService.delete(id)){
             return new ResponseEntity(HttpStatus.OK);
         }else{
-            return new ResponseEntity(HttpStatus.NOT_FOUND);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
     }
 }

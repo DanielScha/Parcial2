@@ -1,6 +1,6 @@
 package Parcial2.Persistence;
 
-import Parcial2.EntitiesTest.Usuario;
+import Parcial2.Entities.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
@@ -15,9 +15,6 @@ import java.util.List;
 @Repository
 public class UsuarioDao extends AbstractDao<Usuario> {
 
-    public UsuarioDao(){
-        super();
-    }
     @Autowired
     public UsuarioDao(@Value("${db.host}") String host, @Value("${db.port}") String port, @Value("${db.name}") String name,
                       @Value("${db.username}") String user, @Value("${db.password}") String pass){
@@ -62,7 +59,7 @@ public class UsuarioDao extends AbstractDao<Usuario> {
         }
         return null;
     }
-    public Usuario getById(int id){
+    /*public Usuario getById(int id){
         try{
             PreparedStatement ps = cn.prepareStatement("SELECT * FROM usuarios WHERE id = ?");
             ps.setInt(1,id);
@@ -78,7 +75,7 @@ public class UsuarioDao extends AbstractDao<Usuario> {
             e.printStackTrace();
             return null;
         }
-    }
+    }*/
     public Usuario getByNombre(String nombre){
         try{
             PreparedStatement ps = cn.prepareStatement("SELECT * FROM usuarios WHERE nombre_usuario = ?");

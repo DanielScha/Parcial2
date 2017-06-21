@@ -1,6 +1,6 @@
 package Parcial2.Services;
 
-import Parcial2.EntitiesTest.Usuario;
+import Parcial2.Entities.Usuario;
 import Parcial2.Persistence.UsuarioDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,9 +24,9 @@ public class UsuarioService {
     public List<Usuario> getAll(){
         return uDao.getAll();
     }
-    public Usuario getById(int id){
+    /*public Usuario getById(int id){
         return uDao.getById(id);
-    }
+    }*/
     public boolean delete(int id){
         return uDao.delete(id);
     }

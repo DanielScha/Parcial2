@@ -1,6 +1,6 @@
 package Parcial2.Util;
 
-import Parcial2.EntitiesTest.Usuario;
+import Parcial2.Entities.Usuario;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
 

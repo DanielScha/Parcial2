@@ -1,4 +1,4 @@
-package Parcial2.EntitiesTest;
+package Parcial2.Entities;
 
 import java.util.List;
 

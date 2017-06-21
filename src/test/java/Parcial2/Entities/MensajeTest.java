@@ -1,6 +1,7 @@
-package Parcial2.EntitiesTest;
+package Parcial2.Entities;
 
 import junit.framework.TestCase;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,7 +18,7 @@ public class MensajeTest extends TestCase{
     private Timestamp fecha;
 
     @Before
-    public void setup()throws ParseException{
+    public void setUp()throws ParseException{
         recipiente = new Usuario();
         remitente = new Usuario();
         m = new Mensaje();
@@ -29,8 +30,15 @@ public class MensajeTest extends TestCase{
         m.setFecha(fecha);
     }
 
+   @After
+    public void tearDown() throws Exception{
+        m=null;
+    }
+
     @Test
-    public void testId(){assertEquals(m.getId(),1);}
+    public void testId(){
+        System.out.println(m);
+        assertEquals(m.getId(),1);}
 
     @Test
     public void testRecipiente(){assertEquals(m.getRecipiente(),recipiente);}

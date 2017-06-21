@@ -1,6 +1,6 @@
 package Parcial2.Services;
 
-import Parcial2.EntitiesTest.Mensaje;
+import Parcial2.Entities.Mensaje;
 import Parcial2.Persistence.MensajeDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

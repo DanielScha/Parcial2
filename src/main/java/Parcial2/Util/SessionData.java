@@ -1,6 +1,7 @@
 package Parcial2.Util;
 
-import Parcial2.EntitiesTest.Usuario;
+import Parcial2.Entities.Usuario;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
@@ -20,7 +21,10 @@ public class SessionData {
     private HashMap<String, AuthenticationData> sessionData;
 
     @Value("${session.expiration}")
-    int expirationTime;
+    private int expirationTime;
+
+    @Autowired
+    protected AuthenticationData aData;
 
 
     public SessionData() {
@@ -29,7 +33,6 @@ public class SessionData {
 
     public String addSession(Usuario usuario) {
         String sessionId = UUID.randomUUID().toString();
-        AuthenticationData aData = new AuthenticationData();
         aData.setUsuario(usuario);
         aData.setLastAction(new DateTime());
         sessionData.put(sessionId, aData);

@@ -1,6 +1,7 @@
-package Parcial2.EntitiesTest;
+package Parcial2.Entities;
 
 import junit.framework.TestCase;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -32,6 +33,11 @@ public class UsuarioTest extends TestCase {
         u.setContraseña("contraseña");
         u.setEmail("email");
         u.setMensajes(m);
+    }
+
+    @After
+    public void tearDown() throws Exception{
+        u=null;
     }
 
     @Test

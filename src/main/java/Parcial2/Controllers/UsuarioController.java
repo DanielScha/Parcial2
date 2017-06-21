@@ -1,6 +1,6 @@
 package Parcial2.Controllers;
 
-import Parcial2.EntitiesTest.Usuario;
+import Parcial2.Entities.Usuario;
 import Parcial2.Services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -62,10 +62,10 @@ public class UsuarioController {
     public ResponseEntity delete(@RequestHeader int id){
         if(uService.delete(id)){
             return new ResponseEntity(HttpStatus.OK);
-        }else if(uService.getById(id).getApellido().equals("Fino") && uService.getById(id).getNombre().equals("Pablo")){
-            return new ResponseEntity(HttpStatus.I_AM_A_TEAPOT);
-        }else{
-            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        }/*else if(uService.getById(id).getApellido().equals("Fino") && uService.getById(id).getNombre().equals("Pablo")){
+            return new ResponseEntity(HttpStatus.I_AM_A_TEAPOT);  lo queria dejar pero asi tengo que hacer menos test
+        }*/else{
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
     }
 }

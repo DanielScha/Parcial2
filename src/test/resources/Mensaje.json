@@ -1,0 +1,33 @@
+{
+  "remitente": {
+    "id": 6,
+    "nombre_usuario" : "nombreUsuario",
+    "nombre": "nombre",
+    "apellido": "apellido",
+    "direccion": "direccion",
+    "telefono": "telefono",
+    "ciudad": "ciudad",
+    "provincia": "provincia",
+    "pais": "pais",
+    "contraseña": "contraseña",
+    "email": "email",
+    "mensajes": null
+  },
+  "recipiente":{
+    "id": 7,
+    "nombre_usuario" : "nombreUsuario2",
+    "nombre": "nombre",
+    "apellido": "apellido",
+    "direccion": "direccion",
+    "telefono": "telefono",
+    "ciudad": "ciudad",
+    "provincia": "provincia",
+    "pais": "pais",
+    "contraseña": "contraseña",
+    "email": "email2",
+    "mensajes": null
+  },
+  "asunto": "asunto",
+  "mensaje": "mensaje",
+  "fecha": null
+}

@@ -1,7 +1,7 @@
 package Parcial2.Persistence;
 
-import Parcial2.EntitiesTest.Mensaje;
-import Parcial2.EntitiesTest.Usuario;
+import Parcial2.Entities.Mensaje;
+import Parcial2.Entities.Usuario;
 import Parcial2.Util.AuthenticationData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,9 +18,6 @@ import java.util.List;
  */
 @Repository
 public class MensajeDao extends AbstractDao<Mensaje> {
-    public MensajeDao(){
-        super();
-    }
 
     @Autowired
     public MensajeDao(@Value("${db.host}") String host, @Value("${db.port}") String port, @Value("${db.name}") String name,
@@ -33,7 +30,7 @@ public class MensajeDao extends AbstractDao<Mensaje> {
 
     public boolean save(Mensaje message) {
         try {
-            PreparedStatement ps = cn.prepareStatement("INSERT INTO mensajes (id_remitente, id_recipiente, asunto, mensaje, fecha, deleted, VALUES(?,?,?,?,?,?);");
+            PreparedStatement ps = cn.prepareStatement("INSERT INTO mensajes (id_remitente, id_recipiente, asunto, mensaje, fecha, deleted) VALUES(?,?,?,?,?,?);");
             ps.setInt(1, message.getRemitente().getId());
             ps.setInt(2, message.getRecipiente().getId());
             ps.setString(3, message.getAsunto());
@@ -50,15 +47,15 @@ public class MensajeDao extends AbstractDao<Mensaje> {
 
     public List<Mensaje> getAll(){
         try{
-            PreparedStatement ps = cn.prepareStatement("SELECT id, asunto, mensaje, fecha, (SELECT email FROM mensajes m INNER JOIN usuarios u" +
-                                                        "ON m.id_remitente = u.id) AS email_remitente FROM mensajes WHERE id_recipiente = ? AND deleted = false;");
+            PreparedStatement ps = cn.prepareStatement("SELECT m.id, m.asunto, m.mensaje, m.fecha, u.email FROM mensajes m INNER JOIN usuarios u " +
+                    "ON m.id_remitente = u.id WHERE m.id_recipiente = ? AND m.deleted = false;");
             ps.setInt(1, aD.getUsuario().getId());
             ResultSet rs = ps.executeQuery();
             ArrayList<Mensaje> messages = new ArrayList<Mensaje>();
             while (rs.next()) {
-                Usuario remitente = new Usuario(rs.getString("email_remitente"));
-                Mensaje m = new Mensaje(remitente, aD.getUsuario(), rs.getString("asunto"), rs.getString("mensaje"), rs.getTimestamp("fecha"));
-                m.setId(rs.getInt("id"));
+                Usuario remitente = new Usuario(rs.getString("u.email"));
+                Mensaje m = new Mensaje(remitente, aD.getUsuario(), rs.getString("m.asunto"), rs.getString("m.mensaje"), rs.getTimestamp("m.fecha"));
+                m.setId(rs.getInt("m.id"));
                 messages.add(m);
             }
             return messages;
@@ -69,15 +66,15 @@ public class MensajeDao extends AbstractDao<Mensaje> {
     }
     public List<Mensaje> getAllSended(){
         try{
-            PreparedStatement ps = cn.prepareStatement("SELECT id, asunto, mensaje, fecha, (SELECT email FROM mensajes m INNER JOIN usuarios u" +
-                    "ON m.id_recipiente = u.id) AS email_recipiente FROM mensajes WHERE id_remitente = ?;");
+            PreparedStatement ps = cn.prepareStatement("SELECT m.id, m.asunto, m.mensaje, m.fecha, u.email FROM mensajes m INNER JOIN usuarios u " +
+                    "ON m.id_recipiente = u.id WHERE m.id_remitente = ?;");
             ps.setInt(1, aD.getUsuario().getId());
             ResultSet rs = ps.executeQuery();
             ArrayList<Mensaje> messages = new ArrayList<Mensaje>();
             while (rs.next()) {
-                Usuario recipiente = new Usuario(rs.getString("email_recipiente"));
-                Mensaje m = new Mensaje(aD.getUsuario(), recipiente, rs.getString("asunto"), rs.getString("mensaje"), rs.getTimestamp("fecha"));
-                m.setId(rs.getInt("id"));
+                Usuario recipiente = new Usuario(rs.getString("u.email"));
+                Mensaje m = new Mensaje(aD.getUsuario(), recipiente, rs.getString("m.asunto"), rs.getString("m.mensaje"), rs.getTimestamp("m.fecha"));
+                m.setId(rs.getInt("m.id"));
                 messages.add(m);
             }
             return messages;
@@ -88,15 +85,15 @@ public class MensajeDao extends AbstractDao<Mensaje> {
     }
     public List<Mensaje> getAllDeleted(){
         try{
-            PreparedStatement ps = cn.prepareStatement("SELECT id, asunto, mensaje, fecha, (SELECT email FROM mensajes m INNER JOIN usuarios u" +
-                    "ON m.id_remitente = u.id) AS email_remitente FROM mensajes WHERE id_recipiente = ? AND deleted = true;");
+            PreparedStatement ps = cn.prepareStatement("SELECT m.id, m.asunto, m.mensaje, m.fecha, u.email FROM mensajes m INNER JOIN usuarios u " +
+                                                               "ON m.id_remitente = u.id WHERE m.id_recipiente = ? AND m.deleted = true;");
             ps.setInt(1, aD.getUsuario().getId());
             ResultSet rs = ps.executeQuery();
             ArrayList<Mensaje> messages = new ArrayList<Mensaje>();
             while (rs.next()) {
-                Usuario remitente = new Usuario(rs.getString("email_remitente"));
-                Mensaje m = new Mensaje(remitente, aD.getUsuario(), rs.getString("asunto"), rs.getString("mensaje"), rs.getTimestamp("fecha"));
-                m.setId(rs.getInt("id"));
+                Usuario remitente = new Usuario(rs.getString("u.email"));
+                Mensaje m = new Mensaje(remitente, aD.getUsuario(), rs.getString("m.asunto"), rs.getString("m.mensaje"), rs.getTimestamp("m.fecha"));
+                m.setId(rs.getInt("m.id"));
                 messages.add(m);
             }
             return messages;
@@ -107,7 +104,7 @@ public class MensajeDao extends AbstractDao<Mensaje> {
     }
     public boolean delete(int id){
         try{
-            PreparedStatement ps = cn.prepareStatement("UPDATE FROM mensajes SET deleted = true WHERE id = ?;");
+            PreparedStatement ps = cn.prepareStatement("UPDATE mensajes SET deleted = true WHERE id = ?;");
             ps.setInt(1, id);
             ps.execute();
             return true;

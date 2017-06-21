@@ -29,7 +29,7 @@ public class Config {
         return registration;
     }
 
-    @Bean
+   @Bean
     public Connection getConnetion(@Value("${db.host}") String host,@Value("${db.port}") String port,@Value("${db.name}") String name,
                                     @Value("${db.username}") String user, @Value("${db.password}") String pass){
         try {
